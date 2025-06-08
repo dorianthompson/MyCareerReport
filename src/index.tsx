@@ -3,13 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter as Router } from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom'
+
+import BasicQuiz from './components/BasicQuiz';
+import DetailedQuiz from './components/DetailedQuiz';
+import CareerReport from './components/CareerReport';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+    <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/basicquiz" element={<BasicQuiz/>} />
+        <Route path="/detailedquiz" element={<DetailedQuiz/>} />
+        <Route path="/results" element={<CareerReport/>} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
