@@ -1,5 +1,3 @@
-import React from 'react'
-
 function BasicQuiz() {
   return (
     <div>
